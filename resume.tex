@@ -1,0 +1,141 @@
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Jeffrey Jing}
+\newcommand{\yourWebsite}{https://abdullaharif.tech}
+\newcommand{\yourEmail}{jjingdn@gmail.com}
+\newcommand{\yourPhone}{626-241-8731}
+\newcommand{\githubUserName}{JeffreyJing}
+\newcommand{\linkedInUserName}{jeffrey-jing97}
+
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsite}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \yourPhone
+%     \\
+%     \href{https://www.linkedin.com/in/\linkedInUserName}{LinkedIn://\linkedInUserName} & Website : \href{\yourWebsite}{abdullaharif.tech}
+%     \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape \yourName} \\ \vspace{1pt}
+    \small \yourPhone $|$ \href{mailto:\yourEmail}{\underline{\yourEmail}} $|$ 
+    \href{https://linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
+    \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}}
+\end{center}
+
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Work Experience}
+\resumeHeading{Pathware}{Software Development Engineer Intern}{Seattle, WA}{March 2020 – Aug 2020}
+\begin{tightemize}
+    \item Designed and implemented a Doxygen parser using \textbf{Python} web scraping that handles, processes, and re-formats information for all source files in the system.
+    %  \item Here is another bullet that I might choose to uncomment for some jobs
+    \item Created an image parser for FPM technologies in \textbf{C++} and \textbf{ Java}.
+\end{tightemize}
+\sectionsep
+
+    \resumeHeading{BlueJay}{Software Quality Engineer Intern}{Remote}{Dec 2018 - Mar 2019}
+\begin{tightemize}
+    \item Verified production tier supply chain integration software.
+    \item Created, implemented, and validated test case scenarios for production code and software. 
+\end{tightemize}
+\sectionsep
+
+\resumeHeading{HeroClip}{Frontend Development Intern}{Seattle, WA}{May 2017 – Aug 2017}
+\begin{tightemize}
+    \item Used Shopify API to design an ship web pages for the HeroClip customer website.
+    \item Created \textbf{UML} diagrams and noted where new features were added to make the codebase easier to maintain.
+\end{tightemize}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Swap degree and school if your school is reputable
+\educationHeading{University of Washington}{Information Systems}{Seattle, WA}{June 2020}
+
+
+% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
+\sectionsep
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+
+\Project{Memory Manager}{}
+\descript{C, Valgrind, GDB, Gitlab, stdlib}\\
+A program that mimics the C standard library's malloc and free by implementing a LinkedList of memory blocks sorted by size.
+\sectionsep
+
+\Project{Octopus Interpreter}{}
+\descript{Haskell, Racket, Functional Programming, Nested Classes}\\
+A Haskell interpreter that interprets and relays Racket Syntax from the user.\\
+\sectionsep
+  
+\Project{Marvel Graph}{}
+\descript{Java, Blackbox & Whitebox testing, Graphs, Java Generics}\hfill \\
+A graph that represents a social network among all the Marvel Comic Book characters, where each character is a node and each pair of nodes is connected if they've appeared in a comic book together.
+\sectionsep
+
+\Project{Fear Filter}{}
+\descript{ JavaScript, Java, HTML \& CSS}\\
+A Chrome extension that allows users to use keywords to filter out undesired images (from phobias to movie/TV spoilers). Created during a Hackathon.
+\sectionsep
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{resumeSkillList}
+    \singleItem{Languages:}{Java, C++, Python, C, Prolog, Bash, Racket, Haskell}
+    \\
+    \singleItem{Web Development:}{React, JavaScript, HTML/CSS}
+    \\
+    \singleItem{Technology:}{Git, Kubernetes, Unix}
+\end{resumeSkillList}
+\sectionsep
+
+\section{Relevant Coursework}
+\singleItem{CSE 331:} {Software Design \& Implementation} \\
+\singleItem{CSE 341:} {Programming Languages} \\
+\singleItem{CSE 373:} {Data Structures \& Algorithms} \\
+\singleItem{AMATH 301:} {Scientific Computing}
+ % A more concise alternate 
+% \begin{resumeSkillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{}%
+% \end{resumeSkillList}
+\end{document}
+
